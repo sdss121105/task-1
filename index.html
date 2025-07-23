@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Job Opportunity - Quikr India</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #e1bee7);
+      margin: 0;
+      padding: 20px;
+    }
+
+    .job-container, .thank-you-message {
+      background-color: #fff;
+      max-width: 800px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      animation: fadeIn 0.7s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 15px;
+    }
+
+    .job-header h2 {
+      margin: 0;
+      color: #6a1b9a;
+    }
+
+    .job-detail {
+      margin-top: 20px;
+    }
+
+    .job-detail h3 {
+      color: #3949ab;
+      margin-bottom: 10px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .info-item {
+      background-color: #f3e5f5;
+      padding: 15px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .info-item i {
+      color: #8e24aa;
+    }
+
+    .btn-group {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .btn {
+      padding: 10px 25px;
+      background: #8e24aa;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      margin: 10px;
+    }
+
+    .btn:hover {
+      background: #6a1b9a;
+    }
+
+    .thank-you-message {
+      display: none;
+      text-align: center;
+    }
+
+    .thank-you-message h2 {
+      color: #6a1b9a;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .thank-you-message p {
+      color: #555;
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 600px) {
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Job Details Section -->
+  <div class="job-container" id="jobSection">
+    <div class="job-header">
+      <h2>Job Opportunity ✨</h2>
+      <span>Posted: 23/01/2024</span>
+    </div>
+
+    <div class="job-detail">
+      <h3>QUICKR INDIA PRIVATE LIMITED - Part Time Work</h3>
+      <p><strong>Description:</strong> It's take daily 30 mins we can earn money</p>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-item"><i class="fas fa-building"></i> Private Sector</div>
+      <div class="info-item"><i class="fas fa-graduation-cap"></i> Min. Qualification: Upto 9th</div>
+      <div class="info-item"><i class="fas fa-map-marker-alt"></i> Location: Telangana, Medak</div>
+      <div class="info-item"><i class="fas fa-briefcase"></i> Full Time / Work From Home</div>
+      <div class="info-item"><i class="fas fa-rupee-sign"></i> ₹ 8000 - 10000 / month</div>
+      <div class="info-item"><i class="fas fa-users"></i> Gender: Any</div>
+    </div>
+
+    <div class="btn-group">
+      <button class="btn" onclick="showThankYou()">Apply</button>
+      <button class="btn" onclick="window.print()">Print</button>
+    </div>
+  </div>
+
+  <!-- Thank You Message Section -->
+  <div class="thank-you-message" id="thankYouSection">
+    <h2>🎉 Thank You for Applying!</h2>
+    <p>We’ve received your interest. We’ll get back to you soon with more details.</p>
+    <div class="btn-group">
+      <button class="btn" onclick="goBack()">⬅ Back</button>
+      <button class="btn" onclick="window.print()">Print</button>
+    </div>
+  </div>
+
+  <script>
+    function showThankYou() {
+      document.getElementById("jobSection").style.display = "none";
+      document.getElementById("thankYouSection").style.display = "block";
+    }
+
+    function goBack() {
+      document.getElementById("thankYouSection").style.display = "none";
+      document.getElementById("jobSection").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
